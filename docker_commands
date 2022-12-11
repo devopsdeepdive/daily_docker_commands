@@ -1,7 +1,7 @@
 docker ps
 docker exec -it 0d4bffda8f32 /bin/bash
 docker rmi $(docker images -a -q)
-docker run -itd --name sample_httpd -p 8081:80 2534b6844ad0
+docker run -itd --name sample_httpd -p (host port)8081:80(container port) 2534b6844ad0
 docker run -itd --name hard_apache2 -p 8082:80 --memory="30m" 2534b6844ad0
 docker run -itd --name soft_apache2 -p 8083:80 --memory-reservation="45m" 2534b6844ad0
 docker inspect a5db687773c8
